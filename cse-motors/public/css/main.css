@@ -1,0 +1,420 @@
+﻿/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #e74c3c;
+    --accent-color: #3498db;
+    --text-color: #2c3e50;
+    --background-color: #ecf0f1;
+    --white: #ffffff;
+    --gray-light: #f8f9fa;
+    --gray: #95a5a6;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Styles */
+.header-container {
+    background: linear-gradient(135deg, var(--primary-color), #34495e);
+    color: var(--white);
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.header-container h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Navigation Styles */
+.main-nav {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.main-nav a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    flex: 1;
+}
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.welcome-section h2 {
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Featured Car Section */
+.featured-car {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.image-placeholder {
+    background: #ddd;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    color: #666;
+    font-size: 1.2rem;
+}
+
+.car-details h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.car-details ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.car-details li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-light);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.car-details li:before {
+    content: "✓";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--secondary-color), #c0392b);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.3);
+}
+
+/* Upgrades Section */
+.upgrades-section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.upgrades-section h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.upgrades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.upgrade-item {
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid var(--gray-light);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.upgrade-item:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.upgrade-placeholder {
+    background: #eee;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+.upgrade-item p {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-top: 0.5rem;
+}
+
+/* Reviews Section */
+.reviews-section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.reviews-section h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.reviews-list {
+    list-style: none;
+}
+
+.reviews-list li {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    background: var(--gray-light);
+    border-left: 4px solid var(--accent-color);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.reviews-list li:hover {
+    background: var(--white);
+    border-left-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-content p {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Media Queries - Desktop */
+@media screen and (min-width: 768px) {
+    .header-container h1 {
+        font-size: 3rem;
+    }
+    
+    .main-nav ul {
+        gap: 1rem;
+    }
+    
+    .featured-car {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .car-image {
+        flex: 1;
+    }
+    
+    .car-details {
+        flex: 1;
+    }
+    
+    .upgrades-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .container {
+        padding: 3rem 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .welcome-section h2 {
+        font-size: 2.5rem;
+    }
+    
+    .car-details h3 {
+        font-size: 2.2rem;
+    }
+    
+    .upgrades-section h3,
+    .reviews-section h3 {
+        font-size: 2.2rem;
+    }
+}
+/* ... (keep all the existing CSS above) ... */
+
+/* Featured Car Section - Updated for actual images */
+.featured-car {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background: var(--white);
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.car-main-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.car-details h3 {
+    color: var(--primary-color);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.car-details ul {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.car-details li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--gray-light);
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.car-details li:before {
+    content: "✓";
+    color: var(--secondary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, var(--secondary-color), #c0392b);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(231, 76, 60, 0.3);
+}
+
+/* Upgrades Section - Updated for actual images */
+.upgrades-section {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.upgrades-section h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.upgrades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+}
+
+.upgrade-item {
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid var(--gray-light);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.upgrade-item:hover {
+    border-color: var(--accent-color);
+    transform: translateY(-5px);
+}
+
+.upgrade-item img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 0.5rem;
+}
+
+.upgrade-item p {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+/* ... (keep all the existing CSS below) ... */

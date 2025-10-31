@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/main.css" media="screen">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>CSE Motors</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <div class="main-nav">
+            <ul>
+                <li><a href="/" class="active">Home</a></li>
+                <li><a href="#">Custom</a></li>
+                <li><a href="#">Sedan</a></li>
+                <li><a href="#">SUV</a></li>
+                <li><a href="#">Truck</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main>
+        <%- body %>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <%= currentYear %>, CSE 340 App</p>
+        </div>
+    </footer>
+</body>
+</html>
