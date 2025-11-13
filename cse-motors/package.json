@@ -12,7 +12,12 @@
     "express": "^4.18.2",
     "express-ejs-layouts": "^2.5.1"
   },
-  "devDependencies": {
-    "nodemon": "^3.0.1"
-  }
+  "keywords": [
+    "car-dealership",
+    "express",
+    "ejs",
+    "nodejs"
+  ],
+  "author": "Your Name",
+  "license": "MIT"
 }
